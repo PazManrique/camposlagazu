@@ -6,7 +6,6 @@ import { HttpClientModule} from '@angular/common/http';
 import { ProductService } from './services/product.service';
 import { MatSliderModule } from '@angular/material/slider';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './home/home.component';
 import { CardProductComponent } from './components/card-product/card-product.component';
 import {MatCardModule} from '@angular/material/card';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
@@ -20,6 +19,7 @@ import { AddComponent } from './components/admin/products/add/add.component';
 import { EditComponent } from './components/admin/products/edit/edit.component';
 import { DeleteComponent } from './components/admin/products/delete/delete.component';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './components/home/home/home.component';
 
 
 
@@ -38,7 +38,6 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     ProductListComponent,
-    HomeComponent,
     CardProductComponent,
     NavBarComponent,
     ProductDetailsComponent,
@@ -48,6 +47,7 @@ const routes: Routes = [
     AddComponent,
     EditComponent,
     DeleteComponent,
+    HomeComponent,
     
    
   ],
