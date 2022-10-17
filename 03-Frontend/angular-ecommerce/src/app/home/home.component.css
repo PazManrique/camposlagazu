@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Island+Moments&family=Kite+One&family=Ropa+Sans:ital@0;1&display=swap');
+
+ /* body{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position:50% 50%;
+    background-image:url('../assets/images/home/calendarioganadero.jpg');
+    
+} */ 
+
+#homeTitle{
+    font-family: 'Grand Hotel', cursive;
+}
+#claim{
+    font-family: 'Ropa Sans', sans-serif;
+
+}
+#enterButton{
+    font-family: 'Kite One', sans-serif;
+
+}
+#author, #slogan{
+    font-family: 'Island Moments', cursive;
+}
