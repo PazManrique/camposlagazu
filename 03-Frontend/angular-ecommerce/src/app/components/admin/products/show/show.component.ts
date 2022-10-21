@@ -27,7 +27,7 @@ export class ShowComponent implements OnInit {
     this.listProducts()}
     
     listProducts(){
-    this.productService.getProductList().subscribe(
+    this.productService.getAll().subscribe(
       data => {this.products = data}
     )
   }
