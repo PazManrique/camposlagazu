@@ -31,6 +31,11 @@ public class ProductController {
        return productSevice.getAll();
      }
 
+     @GetMapping(value = "/products/{id}")
+     public Product findById(@PathVariable Long id) {
+         return productSevice.findById(id);
+     }
+
     @PostMapping(value="/products/create")
      public Product saveProduct(@RequestBody Product newProduct ) {
       Product product = productSevice.saveProduct(newProduct);

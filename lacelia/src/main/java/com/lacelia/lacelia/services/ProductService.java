@@ -17,6 +17,11 @@ public class ProductService {
     public List<Product> getAll() {
         return repository.findAll();
     }
+
+    public Product findById(Long id) {
+        return repository.findById(id).orElse(null);
+    }
+
 public Product saveProduct(Product newProduct) {
     return repository.save(newProduct);
 }
@@ -48,7 +53,7 @@ public Product updateProduct(Long id, Product newDataProduct) {
      .map((product)->{
         product.setName(newDataProduct.getName());
         product.setDescription(newDataProduct.getDescription());
-		product.setImageUrl(newDataProduct.getImageUrl());
+		product.setImage(newDataProduct.getImage());
         return repository.save(product);
      })
      .orElseGet(()->{

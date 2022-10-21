@@ -20,17 +20,17 @@ public class Product {
     private String name;
     @Column(name = "description", nullable = false)
     private String description;
-	@Column(name = "imageUrl", nullable = false)
-    private String imageUrl;
+	@Column(name = "image", nullable = false)
+    private String image;
 
     public Product() {
     }
 
-    public Product(Long id, String name, String description, String imageUrl) {
+    public Product(Long id, String name, String description, String image) {
         this.id = id;
         this.name = name;
         this.description = description;
-		this.imageUrl  = imageUrl;
+		this.image  = image;
     }
 	
 	public Long getId() {
@@ -52,11 +52,11 @@ public class Product {
         this.description = description;
     }
 
-	public String getImageUrl() {
-        return imageUrl;
+	public String getImage() {
+        return image;
     }
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setImage(String image) {
+        this.image = image;
     }
 }
 

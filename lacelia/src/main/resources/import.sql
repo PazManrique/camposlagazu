@@ -1,5 +1,5 @@
 ALTER TABLE product AUTO_INCREMENT = 1;
 
-INSERT INTO product (description, name  ) values ("Pollo","genial");
-INSERT INTO product (description, name  ) values ("Huevos","genial");
-INSERT INTO product (description, name  ) values ("Miel","genial");
+INSERT INTO product (description, name, image  ) values ("Pollo","genial", "imagen");
+INSERT INTO product (description, name, image  ) values ("Huevos","genial", "imagen");
+INSERT INTO product (description, name, image  ) values ("Miel","genial", "imagen");
