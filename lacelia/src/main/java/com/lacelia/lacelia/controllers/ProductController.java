@@ -36,13 +36,13 @@ public class ProductController {
          return productSevice.findById(id);
      }
 
-    @PostMapping(value="/products/create")
+    @PostMapping(value="/products")
      public Product saveProduct(@RequestBody Product newProduct ) {
       Product product = productSevice.saveProduct(newProduct);
       return product;
      }
 
-     @DeleteMapping(path = "/products/delete")
+     @DeleteMapping(path = "/products")
     public Map<String,String> deleteProduct(@RequestBody Product product ) {
      Map<String,String> message = productSevice.deleteProduct(product);
      return message;
