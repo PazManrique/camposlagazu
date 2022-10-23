@@ -1,4 +1,4 @@
-<div class="container col md-6">
+<!-- <div class="container col md-6">
     <div class="card">
         <div class="card-header">
             <h3>Agregar Productos</h3>
@@ -14,7 +14,7 @@
                     <input type="text" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for="">Imagen</label>
+                    <label for="">Imdescriptionn</label>
                     <input type="text" class="form-control">
                 </div>
                 <button class="btn btn-danger">Guardar</button>
@@ -22,4 +22,19 @@
         
         </div>
     </div>
-</div>
+</div> -->
+
+<form #loginForm="ngForm" (ngSubmit)="submitData(loginForm.value)">
+    <div class="main">
+      <div class="input-fields">
+        <input name="name" ngModel placeholder="Name" id="name" type="text" class="input-field" />
+      </div>
+      <div class="input-fields">
+        <input name="description" ngModel placeholder="description" id="description" type="text" class="input-field" />
+      </div>
+      <div class="input-fields">
+        <input name="image" ngModel placeholder="image" id="image" type="text" class="input-field" />
+      </div>
+      <button>Add Data </button>
+    </div>
+  </form>
