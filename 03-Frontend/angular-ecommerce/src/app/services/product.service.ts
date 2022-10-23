@@ -33,6 +33,14 @@ constructor(private http:HttpClient) { }
     return this.http.post(`${baseUrl}`, data)
 }
 
+updateData(data: any, id: string): Observable<any> {
+  return this.http.patch(`${baseUrl}/${id}`, data)
+}
+
+deleteData(id: string): Observable<any> {
+  return this.http.delete(`${baseUrl}/${id}`)
+}
+
 
 
   update(id: any, data: any): Observable<any> {
