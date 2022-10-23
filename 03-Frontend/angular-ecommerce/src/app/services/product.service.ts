@@ -37,7 +37,7 @@ updateData(data: any, id: string): Observable<any> {
   return this.http.patch(`${baseUrl}/${id}`, data)
 }
 
-deleteData(id: string): Observable<any> {
+deleteData(id: any): Observable<any> {
   return this.http.delete(`${baseUrl}/${id}`)
 }
 

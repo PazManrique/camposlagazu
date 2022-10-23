@@ -17,8 +17,11 @@ export class ShowComponent implements OnInit {
   Edit(){
     this.router.navigate(["edit"])
   }
-  Delete(){
-    this.router.navigate(["delete"])
+  delete() {
+    this.productService.deleteData(`622c573cf23ce54e445b2bed`)
+      .subscribe(response => {
+        console.log(response);
+      })
   }
 
 
