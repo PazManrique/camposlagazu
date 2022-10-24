@@ -29,7 +29,8 @@ const routes: Routes = [
 {path: 'add', component: AddComponent },
 {path: 'delete', component: DeleteComponent },
 {path: 'edit', component: EditComponent },
-{path: 'dashboard', component: AdminDashboardComponent },
+{path: 'user', component: CardProductComponent },
+
 
 ]
 

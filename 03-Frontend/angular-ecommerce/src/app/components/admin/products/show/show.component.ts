@@ -25,7 +25,10 @@ export class ShowComponent implements OnInit {
   }
 
 
-
+  add(){
+    this.router.navigate(["add"])
+  }
+  
   ngOnInit(): void {
     this.listProducts()}
     
@@ -33,6 +36,8 @@ export class ShowComponent implements OnInit {
     this.productService.getAll().subscribe(
       data => {this.products = data}
     )
+
+  
   }
 
  

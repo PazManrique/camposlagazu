@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Product } from '../models/Product';
-import { Observable } from 'rxjs';
+import { catchError, Observable, throwError } from 'rxjs';
 
 const baseUrl = 'http://localhost:8080/api/products';
 
@@ -19,14 +19,21 @@ constructor(private http:HttpClient) { }
     return this.httpClient.get<Product[]>(this.baseUrl);
   } */
 
+  private handleError(error: any) {
+    console.log(error);
+    return throwError(error);
+  }
+
   getAll(): Observable<Product[]> {
     return this.http.get<Product[]>(baseUrl);
   }
 
-  get(id: any): Observable<Product> {
-    return this.http.get<Product>(`${baseUrl}/${id}`);
-  }
-
+  getProduct (id: number): Observable<Product> {
+    const url = `${baseUrl}/${id}`;
+    return this.http.get<Product>(url).pipe(
+    catchError(this.handleError)
+    );
+    }
 
 
   create(data: any): Observable<any> {

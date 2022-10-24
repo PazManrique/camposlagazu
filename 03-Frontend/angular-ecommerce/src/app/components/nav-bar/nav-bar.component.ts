@@ -9,8 +9,12 @@ import { Router } from '@angular/router';
 export class NavBarComponent implements OnInit {
 
   constructor(private router:Router) {}
-  Dashboard(){
-    this.router.navigate(["dashboard"])
+  admin(){
+    this.router.navigate(["show"])
+  }
+
+  user(){
+    this.router.navigate(["user"])
   }
  
   ngOnInit(): void {
