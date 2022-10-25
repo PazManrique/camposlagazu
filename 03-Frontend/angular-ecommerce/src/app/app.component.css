@@ -4,17 +4,18 @@ body{
     background-size:cover;
     background-position:50% 50%;
     background-image:url('../assets/images/home/calendarioganadero.jpg');
+    background-color: rgba(56, 79, 42, 1);
     
 }
 
 footer{
     display: flex;
     justify-content: space-around;
-    background-color: rgb(22, 35, 22);
+    background-color: rgba(56, 79, 42, 1);
 }
 #author, #slogan{
     font-family: 'Island Moments', cursive;
     font-size: xx-large;
-    color: white;
+    color: pink;
     
 }

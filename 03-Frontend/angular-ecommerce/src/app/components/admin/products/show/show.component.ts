@@ -12,13 +12,14 @@ import { ProductService } from 'src/app/services/product.service';
 export class ShowComponent implements OnInit {
 
   products: Product[] = [];
+id: any;
   constructor(private productService: ProductService, private router:Router) { }
 
   Edit(){
     this.router.navigate(["edit"])
   }
   delete() {
-    this.productService.deleteData(`622c573cf23ce54e445b2bed`)
+    this.productService.deleteData(Product)
       .subscribe(response => {
         console.log(response);
       })
@@ -40,7 +41,17 @@ export class ShowComponent implements OnInit {
   
   }
 
- 
+  submitData(value: any) {
+    let body = {
+      id: value.id,
+      name: value.name,
+      description: value.description,
+      image: value.image
+    }
+
+    this.productService.deleteData(body)
+  .subscribe(response => {console.log(response)})
+  } 
 
 
 }
