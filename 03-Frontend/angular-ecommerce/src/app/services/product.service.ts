@@ -36,6 +36,14 @@ constructor(private http:HttpClient) { }
     return this.http.get<Product>(productUrl);
   }
 
+  deleteProduct(theProductId: number): Observable<Product> {
+
+    // need to build URL based on product id
+    const productUrl = `${baseUrl}/${theProductId}`;
+
+    return this.http.delete<Product>(productUrl);
+  }
+
 
 
   create(data: any): Observable<any> {
@@ -46,7 +54,7 @@ updateData(data: any, id: string): Observable<any> {
   return this.http.patch(`${baseUrl}/${id}`, data)
 }
 
-deleteData(data: any): Observable<any> {
-  return this.http.delete(`${baseUrl}`, data)
+delete(id: any): Observable<any> {
+  return this.http.delete(`${baseUrl}/${id}`);
 }
 }

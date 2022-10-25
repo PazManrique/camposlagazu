@@ -1,6 +1,6 @@
 body{
-    height: 100%;
-    width: 100%;
+    min-height: 100%;
+  height: fit-content;
     background-size:cover;
     background-position:50% 50%;
     background-image:url('../assets/images/home/calendarioganadero.jpg');
