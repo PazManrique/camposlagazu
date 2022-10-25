@@ -28,7 +28,7 @@ const routes: Routes = [
 {path: 'show', component: ShowComponent },
 {path: 'add', component: AddComponent },
 {path: 'delete', component: DeleteComponent },
-{path: 'edit', component: EditComponent },
+{path: 'edit/:id', component: EditComponent },
 {path: 'user', component: CardProductComponent },
 
 

@@ -22,6 +22,9 @@ export class AddComponent  {
     }
 
     this.productService.create(body)
-  .subscribe(response => {console.log(response)})
+  .subscribe(response => {console.log(response)}),
+  this.router.navigate(["show"])  
   }
+
+  
 }

@@ -1,9 +1,11 @@
 
 export class Product {
-   
-         id?: any;
-         name?: string;
-         description?: string;
-         image?: string;
+   constructor (  
+    public id?: string,
+    public name?: string,
+    public description?: string,
+    public image?: string)
+       
+         {}
     
 } 

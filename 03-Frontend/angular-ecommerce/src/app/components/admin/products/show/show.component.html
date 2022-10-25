@@ -1,7 +1,8 @@
 <div class="container text-center">
     <div class="card text-center">
         <div class="card-header">
-            <h3>Productos</h3>
+            <h3><strong>Productos</strong></h3>
+            <button (click)="add()" class="btn btn-info">Nuevo</button>
         </div>
         <div class="card-body">
             <table class="table table-hover align-middle">
@@ -12,6 +13,7 @@
                         <th>Nombre</th>
                         <th>Descripcion</th>
                         <th>Acciones</th>
+                      
                      
                     </tr>
                 </thead>
@@ -26,9 +28,9 @@
                         <td class="align-middle">{{tempProduct.description}}</td>
                        
                         <td>
-                            <button (click)="Edit()" class="btn btn-warning">Editar</button>
+                            <button  class="btn btn-warning"><a routerLink="/edit/{{ tempProduct.id }}">Editar</a></button>
                             <button (click)="delete()" class="btn btn-danger">Eliminar</button>
-                            <button (click)="add()" class="btn btn-info">Nuevo</button>
+                           
                         </td>
                     </tr>
                 </tbody>

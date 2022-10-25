@@ -28,12 +28,14 @@ constructor(private http:HttpClient) { }
     return this.http.get<Product[]>(baseUrl);
   }
 
-  getProduct (id: number): Observable<Product> {
-    const url = `${baseUrl}/${id}`;
-    return this.http.get<Product>(url).pipe(
-    catchError(this.handleError)
-    );
-    }
+  getProduct(theProductId: number): Observable<Product> {
+
+    // need to build URL based on product id
+    const productUrl = `${baseUrl}/${theProductId}`;
+
+    return this.http.get<Product>(productUrl);
+  }
+
 
 
   create(data: any): Observable<any> {
