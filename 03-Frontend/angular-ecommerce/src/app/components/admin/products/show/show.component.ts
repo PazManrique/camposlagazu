@@ -67,14 +67,7 @@ id: any;
 
   deleteProduct() {
 
-    // get the "id" param string. convert string to a number using the "+" symbol
-    const theProductId: number = +this.route.snapshot.paramMap.get('id')!;
 
-    this.productService.delete(theProductId).subscribe(
-      data => {
-        this.product = data;
-      }
-    )
   }
  
 

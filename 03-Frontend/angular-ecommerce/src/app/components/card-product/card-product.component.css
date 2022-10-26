@@ -1,6 +1,7 @@
 .example-card {
-    max-width: fit-content;
-    max-height: fit-content;
+    max-width: 450px;
+   height: 400px;
+   
     padding: 10%;
     margin-bottom: 10%;
   }
